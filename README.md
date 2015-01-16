@@ -2,6 +2,13 @@
 
 ## CC [Lab Framework][lab] activity integration with [Office Mix][mix] via [Labs][labs_readme]
 
+> For the CC Lab interactive, I think the best approach to get this
+> working quickly is to use an extra iframe. This is the same way that
+> PhET and Kahn is integrated with Office Mix. So we make a new page
+> that includes the labs.js library and iframe-phone, and it embeds Lab
+> interactives inside an iframe. If labs.js is easy to use, this should
+> be really quick to do. Kurt should be able to help if you run into any
+> problems. - Scytacki 2015-01-15
 
 ### References:
 
