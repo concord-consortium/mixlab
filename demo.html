@@ -4,34 +4,34 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <title>Start Empty</title>
+    <title>Mix Labs Demo</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300italic,400,300,700&amp;subset=latin,greek,latin-ext" rel="stylesheet" type="text/css">
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://concord-consortium.github.io/lab-examples/style.css" rel="stylesheet" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="http://concord-consortium.github.io/iframe-phone/dist/iframe-phone.js"></script>
     <script src="https://az592748.vo.msecnd.net/sdk/LabsJS-1.0.4/labs-1.0.4.js"></script>
   </head>
   <body>
-    <div class="top">
-      <header>
-        <div class="sitename"><a href ="http://concord-consortium.github.io/lab-examples/">Lab Examples</a></div>
-        <a href="https://github.com/concord-consortium/lab-examples/blob/gh-pages/pages/03-start-empty.html" class="view-source">View page on GitHub</a>
-      </header>
-    </div>
-
-    <div id="content">
-      <h1>iFrame to example content</h1>
-      <p>
-        This iFrame points to an example activity:
-      </p>
-      <iframe id="interactive-iframe" width="568px" height="433px" 
-        frameborder="no" mozallowfullscreen="true" 
-        scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" 
-        src="http://lab.concord.org/embeddable.html#interactives/basic-examples/area-versus-applied-pressure.json">
-      </iframe>
+    <div class="container">
+      <div class="center-block">
+        <h1>Area versus applied pressure example</h1>
+        
+          <div class="center-block">
+            This activity (Area versus applied pressure) is being loaded from
+              <a href="http://lab.concord.org/embeddable.html#interactives/basic-examples/area-versus-applied-pressure.json">lab.concord.org</a>
+        
+            <iframe id="interactive-iframe" width="568px" height="433px" 
+              frameborder="no" mozallowfullscreen="true" 
+              scrolling="no" allowfullscreen="true" webkitallowfullscreen="true" 
+              src="http://lab.concord.org/embeddable.html#interactives/basic-examples/area-versus-applied-pressure.json">
+            </iframe>
+          </div>
+      </div>
     </div>
   </body>
+
 
   <script>
   // Call this function when jQuery thinks the page is ready.
