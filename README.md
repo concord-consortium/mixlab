@@ -19,6 +19,8 @@ If you can use python to run a local server, then you can test this stuff out lo
 
 Then in enter `http://localhost:8000/labs/MultipleChoice/MultipleChoice.html?PostMessageLabHost` into the text entry box, and click on `Load`
 
+You can try [this example on github pages](http://concord-consortium.github.io/mixlab/).
+
 ### References:
 
 #### Microsoft Labs:
