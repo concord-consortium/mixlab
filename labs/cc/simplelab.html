@@ -34,28 +34,23 @@
         <!-- ko ifnot: showWebPage -->
         <div class="container">
             <div class="container">
-                <h1>Insert Web Page</h1>
+                <h1>Add CC Lab Model</h1>
                 <p>
-                    This app allows you to insert secure web pages starting with https:// into the slide deck.
-                    Non-secure web pages are not supported for security reasons.
-                </p>
-                <br />
-                <p>
-                    Please enter the URL below.
+                    Choose a CC Lab Model from the list below.
                 </p>
                 <form role="form">
                     <div class="form-group">
                         <div class="input-group">
-                            <span class="input-group-addon">https://</span>
-                            <input type="text" class="form-control" placeholder="Web page..." data-bind="value: uri, valueUpdate: 'keyup'">
+                        <select data-bind="options: available_models,
+                            value: chosen_model,
+                            optionsText: 'name',
+                            optionsCaption: 'Choose...'"></select>
                         </div>
+                        Chosen Interactive:
+                        <span data-bind="text: chosen_model() ? chosen_model().name: 'none'"></span>
                     </div>
                 </form>
                 <br />
-                <p>
-                    <b><i>Note:</i></b> Many popular websites (e.g. Youtube, Wikipedia) allow secure access. Please click on the preview
-                    button to ensure the web page is accessible.
-                </p>
             </div>
         </div>
         <!-- /ko -->

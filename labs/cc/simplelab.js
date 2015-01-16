@@ -18,18 +18,37 @@ var WebPageApp;
 
     var AppViewModel = (function () {
         function AppViewModel(mode) {
+              // Constructor for an object with two properties
+            var Interactive = function(name, url) {
+                this.name = name;
+                this.url = url;
+            };
             var _this = this;
             this._modeSwitchP = $.when();
             this.error = ko.observable(false);
             this.uri = ko.observable("");
+            this.available_models=ko.observableArray([
+                new Interactive("applied pressure","interactives/basic-examples/area-versus-applied-pressure.json"),
+                new Interactive("oil and water","interactives/samples/1-oil-and-water-shake.json"),
+                new Interactive("amino acids","interactives/samples/5-amino-acids.json"),
+                new Interactive("pressure can collapse","interactives/sam/gas-laws/7-why-did-the-can-collapse.json") 
+            ]);
+            this.chosen_model=ko.observable(null);
             this.userEditMode = ko.observable(UserEditMode.Edit);
             this.labMode = ko.observable(null);
 
             this.absoluteUri = ko.computed(function () {
                 // Hard Coded -- todo, move to prop
-                return "http://lab.concord.org/embeddable.html#interactives/basic-examples/area-versus-applied-pressure.json";
-                // return 'https://' + _this.uri();
-            });
+                //return "http://lab.concord.org/embeddable.html#interactives/basic-examples/area-versus-applied-pressure.json";
+                
+                var base = "http://lab.concord.org/embeddable.html";
+                var interactive_url = "#";
+                if (this.chosen_model && this.chosen_model()) {
+
+                    interactive_url = interactive_url + this.chosen_model().url;
+                }
+                return base + interactive_url;
+            }, this);
 
             this.switchEditModeText = ko.computed(function () {
                 return _this.userEditMode() === UserEditMode.Preview ? UserEditMode[UserEditMode.Edit] : UserEditMode[UserEditMode.Preview];
@@ -171,7 +190,7 @@ var WebPageApp;
         };
 
         AppViewModel.prototype.getConfigurationFromUri = function (uri) {
-            var appVersion = { major: 1, minor: 0 };
+            var appVersion = { major: 1, minor: 1 };
             var configurationName = uri;
             var activityComponent = {
                 type: Labs.Components.ActivityComponentType,

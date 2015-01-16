@@ -59,7 +59,7 @@
                 <h1>Enter a Lab URL</h1>
                 <div>
                     <p>Try for example, this URL: <br/>
-                        <code>http://localhost:8000/labs/MultipleChoice/MultipleChoice.html?PostMessageLabHost</code>
+                        <code>labs/cc/simplelab.html?PostMessageLabHost</code>
                     </p>
                 </div>
                 <form data-bind="submit: loadLab">
@@ -93,7 +93,7 @@
             var labRegExp = /lab=(.*)/ig;
             var url = labRegExp.exec(window.location.search);            
             
-            var viewModel = new LabsHostViewModel("Edit", url != null ? url[1] : "");
+            var viewModel = new LabsHostViewModel("Edit", "labs/cc/simplelab.html?PostMessageLabHost");
             ko.applyBindings(viewModel);
         </script>
     </body>    
