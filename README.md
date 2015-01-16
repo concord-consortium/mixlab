@@ -18,7 +18,7 @@
 * [labs host test harness][labs_host]
 * [labs documentation][labs_readme]
 * [labs example][labs_example]
-
+* [labs.js from CDN][labs_cdn]
 #### Concord Lab:
 
 * [Lab Framework][lab]
@@ -34,6 +34,7 @@
 [labs_host]: https://labsjs.blob.core.windows.net/sdk/LabsJS-1.0.4/labshost.html
 [labs_readme]: https://labsjs.blob.core.windows.net/sdk/LabsJS-1.0.4/labs.html
 [labs_example]: https://labsjs.blob.core.windows.net/sdk/LabsJS-1.0.4/labshost.html?lab=https://athenadevapps.cloudapp.net/Quiz/MultipleChoice?PostMessageLabHost
+[labs_cdn]https://az592748.vo.msecnd.net/sdk/LabsJS-1.0.4/labs-1.0.4.js
 [lab]: https://github.com/concord-consortium/lab
 [lab_examples]: https://github.com/concord-consortium/lab
 [pressure]:http://lab.concord.org/embeddable.html#interactives/basic-examples/area-versus-applied-pressure.json
