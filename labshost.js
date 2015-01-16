@@ -166,4 +166,3 @@ var LabsHostViewModel = (function () {
     };
     return LabsHostViewModel;
 })();
-//# sourceMappingURL=labshost.js.map

@@ -4,11 +4,20 @@
 
 > For the CC Lab interactive, I think the best approach to get this
 > working quickly is to use an extra iframe. This is the same way that
-> PhET and Kahn is integrated with Office Mix. So we make a new page
+> [PhET](https://phet.colorado.edu/) and [Kahn](https://www.khanacademy.org/) 
+> is integrated with [Office Mix][mix]. So we make a new page
 > that includes the labs.js library and iframe-phone, and it embeds Lab
 > interactives inside an iframe. If labs.js is easy to use, this should
-> be really quick to do. Kurt should be able to help if you run into any
-> problems. - Scytacki 2015-01-15
+> be really quick to do. [Kurt](https://twitter.com/kurtberglund) 
+> should be able to help if you run into any
+> problems. - [Scytacki](https://twitter.com/scytacki) 2015-01-15
+
+If you can use python to run a local server, then you can test this stuff out locally, like this:
+
+      python -c 'import SimpleHTTPServer; SimpleHTTPServer.test()'
+      open http://localhost:8000/labshost.html
+
+Then in enter `http://localhost:8000/labs/MultipleChoice/MultipleChoice.html?PostMessageLabHost` into the text entry box, and click on `Load`
 
 ### References:
 
